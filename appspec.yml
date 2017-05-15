@@ -3,12 +3,3 @@ os: linux
 files:
    - source: /
      destination: /var/www/html
-hooks:
-  BeforeInstall:
-    - location: stop_apache.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: start_apache.sh
-      timeout: 300
-      runas: root
